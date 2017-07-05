@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:text="'Single Category: ' + ${singleCategoryModel.name}" />
+</head>
+<body>
+	<h1 th:text="${singleCategoryModel.name}" />
+	
+	<p th:text="'Categories count: ' + ${singleCategoryModel.reviews.size()}" />
+	<ul>
+		<li th:each="currentReview: ${singleCategoryModel.reviews}">
+			<a th:text="${currentReview.title}"
+				th:href="@{/review(reviewId=${currentReview.id})}"/>
+		</li>
+	</ul>
+</body>
+</html>
