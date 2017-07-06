@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class ReviewController {
+public class ReadReviewsController {
 
 	@Resource
 	private CategoryRepository categoryRepo;
